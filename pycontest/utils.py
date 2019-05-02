@@ -12,7 +12,8 @@ def E_kin(vel, mass):
     """
     vel = np.array(vel)
     mass = np.array(mass)
-    return 0.5 * np.sum(mass * vel**2)
+    v_sq = vel**2
+    return 0.5 * np.sum((mass*v_sq.transpose()).transpose())
 
 def momentum(vel, mass):
     """ calculate the momentum of all particles
@@ -26,4 +27,4 @@ def momentum(vel, mass):
     """
     vel = np.array(vel)
     mass = np.array(mass)
-    return np.sum(mass * vel, axis=0)
+    return np.sum((mass*vel.transpose()).transpose(), axis=0)

@@ -1,12 +1,33 @@
 import numpy as np
 
 def collision_1d(v1_i, v2_i, m1=1, m2=1):
+    """ 1d elastic collisions
+
+    Arguments:
+        v1_1, v2_i: initial values of particles velocities
+        m1, m2: masses
+
+    Returns:
+        final velocities after collisions
+    """
+
     v1_f = (m1 - m2) / (m1 + m2) * v1_i + 2 * m2 / (m1 + m2) * v2_i
     v2_f = (m2 - m1) / (m1 + m2) * v2_i + 2 * m1 / (m1 + m2) * v1_i
     return v1_f, v2_f
 
 
 def collision_2d(v1, v2, r12, m1, m2):
+    """ 2d elastic collisions
+
+    Arguments:
+        v1_1, v2_i: initial values of particles velocities
+        m1, m2: masses
+        r12: vector between particles: r2-r1
+
+    Returns:
+        final velocities after collisions
+    """
+
     if np.linalg.norm(r12) == 0:
         raise Exception("two balls are exactly in the same place, "
                         "consider using smaller time step")
