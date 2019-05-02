@@ -6,8 +6,16 @@ import numpy as np
 import math as mt
 import pdb
 
+"""
+Matplotlib Animation Example
+
+author: Jake Vanderplas
+email: vanderplas@astro.washington.edu
+website: http://jakevdp.github.com
+license: BSD
+Please feel free to use and modify this, but keep the above information. Thanks!
+"""
 class Movie_2d:
-    """ TODO """
 
     def __init__(self, fun, dt, t_max, loc, vel, domain, mass, radius=10):
         self.dt = dt
@@ -53,7 +61,7 @@ class Movie_2d:
                 print("\n html also can not be created")
 
 class Plot_2d:
-    """TODO"""
+
     def __init__(self, dt, t_max, loc1_0, loc2_0, vel1_0, vel2_0,
                  domain, radius, m1=1, m2=1, nr=4, nc=5):
         self.fig = plt.figure()
