@@ -8,6 +8,16 @@ from pycontest.utils import momentum, E_kin
 
 # using default values of m1 and m2
 def test_collision_1d_1():
-    v1_f, v2_f = ec.collision_1d(v1_i=1, v2_i=-2)
+    v1_f, v2_f = ec.collision_1d(v1_i=1, v2_i=-2) #if no mass is given, same mass: they swap velocities
+    assert v1_f== -2
+    assert v2_f== 1
 
+def test_collision_1d_2():
+    v1_f, v2_f = ec.collision_1d(v1_i=1, v2_i=-2, m1=3, m2=3) #check also if i give same mass explicitly
+    assert v1_f== -2
+    assert v2_f== 1
+
+def test_collision_1d_2():
+    v1_f, v2_f = ec.collision_1d(v1_i=-2, v2_i=1, m1=1, m2=3*10**7) 
+    assert v1_f== 0
 
