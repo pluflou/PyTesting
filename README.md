@@ -12,7 +12,9 @@ To create example animations you may need ffmpeg or mencoder packages.
 Troubleshooting:
 ----------------
 - to install the tutorial example code:
+  ```
   $ pip install .
+  ```
 
 - to run the tutorial example code without installation:
   ```
