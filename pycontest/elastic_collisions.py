@@ -29,7 +29,7 @@ def collision_2d(v1, v2, r12, m1, m2):
     """
 
     if np.linalg.norm(r12) == 0:
-        raise Exception("two balls are exactly in the same place, "
+        raise Exception("two particles are exactly in the same place, "
                         "consider using smaller time step")
     n_vect = r12 / np.linalg.norm(r12)
 
