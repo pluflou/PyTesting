@@ -3,6 +3,8 @@
 A collection of exercises for [Pycon 2019](https://us.pycon.org/2019/) 
 tutorial [To trust or to test?: Automated testing of scientific projects with pytest](https://us.pycon.org/2019/schedule/presentation/82/)
 
+- You can find the presentation [here](https://djarecka.github.io/pycontest/presentation/#1)
+
 Dependencies:
 -------------
 
