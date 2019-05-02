@@ -15,8 +15,11 @@ Troubleshooting:
   $ pip install .
 
 - to run the tutorial example code without installation:
+  ```
   $ python -m pycontest.simulation
+  ```
 
 - in case you have more than one python distribution you may need to specify python version to pytest:
+  ```
   $ python3 -m pytest tests                      
-
+  ```
